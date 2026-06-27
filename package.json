@@ -24,5 +24,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./es-2015-constructors.js"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2"
   }
 }
