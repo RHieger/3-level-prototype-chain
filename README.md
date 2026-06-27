@@ -28,4 +28,10 @@ of either explanatory messages or reproduction of color-coded code.
 
 ## How to Install
 
-Download code archive at 
+Download code archive at [https://github.com/RHieger/3-level-prototype-chain/releases/tag/3_level_prototype_chain](https://github.com/RHieger/3-level-prototype-chain/releases/tag/3_level_prototype_chain)
+
+Unzip archive and in terminal type the following command:
+
+```javascript
+npm install
+```
