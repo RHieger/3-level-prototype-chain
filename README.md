@@ -25,3 +25,7 @@ which is avalable through NPM at this address:
 
 Using this package, instances of the chalk object were created, each allowing for a color coding
 of either explanatory messages or reproduction of color-coded code.
+
+## How to Install
+
+Download code archive at 
