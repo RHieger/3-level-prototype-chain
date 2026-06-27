@@ -16,3 +16,10 @@ This program is executable by issuing the command:
 npm start
 ```
 
+## NOTE: The color-coded output, as mentioned above, is implemented using a package called chalk,
+which is avalable through NPM at this address:
+
+[https://www.npmjs.com/package/chalk](https://www.npmjs.com/package/chalk)
+
+Using this package, instances of the chalk object were created, each allowing for a color coding
+of either explanatory messages or reproduction of color-coded code.
