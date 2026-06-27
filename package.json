@@ -1,0 +1,27 @@
+{
+  "name": "3-level-prototype-chain",
+  "version": "1.0.0",
+  "description": "Demonstrate Creation of 3-Level Prototype Chain Using Constructors",
+  "keywords": [
+    "instance-object",
+    "object",
+    "prototype",
+    "constructor",
+    "inheritance"
+  ],
+  "homepage": "https://github.com/RHieger/3-level-prototype-chain#readme",
+  "bugs": {
+    "url": "https://github.com/RHieger/3-level-prototype-chain/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://RHieger@github.com/RHieger/3-level-prototype-chain.git"
+  },
+  "license": "ISC",
+  "author": "Robert Hieger",
+  "type": "module",
+  "main": "es-2015-constructors.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
