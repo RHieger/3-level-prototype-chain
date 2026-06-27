@@ -84,10 +84,12 @@ setTimeout( () => {
 }, 9000);
 
 setTimeout( () => {
-  theme.objIdent('User') + theme.dot('.')               +
-  theme.protoIdent('prototype')                         +
-  theme.identifier('admin = ')                          +
-  theme.boolValue('false') + theme.semicolon(';\n\n')
+  console.log(
+    theme.objIdent('User') + theme.dot('.')               +
+    theme.protoIdent('prototype') + theme.dot('.')        +
+    theme.identifier('admin = ')                          +
+    theme.boolValue('false') + theme.semicolon(';\n\n')
+  );
 }, 11_000);
 
 User.prototype.admin = false;
@@ -98,7 +100,7 @@ setTimeout( () => {
       'Creating object prototype VerifiedMember...\n'
     )
   );  
-}, 9000);
+}, 14_000);
 
 setTimeout( () => {
   console.log(
@@ -125,7 +127,7 @@ setTimeout( () => {
     theme.valueParam('age') + theme.semicolon(';\n')      +
     theme.mainDelim('}\n\n')
   );  
-}, 11_000);
+}, 16_000);
 
 function VerifiedMember(
   lastName,
@@ -146,7 +148,7 @@ setTimeout( () => {
       'VerifiedMember...\n'
     )
   );  
-}, 16_000);
+}, 21_000);
 
 setTimeout( () => {
   console.log(
@@ -155,7 +157,7 @@ setTimeout( () => {
     theme.identifier('verified = ')                       +
     theme.boolValue('true') + theme.semicolon(';\n\n')
   );  
-}, 18_000);
+}, 23_000);
 
 VerifiedMember.prototype.verified = true;
 
@@ -165,20 +167,20 @@ setTimeout( () => {
       'Setting prototype of VerifiedMember to User...\n'
     )
   );  
-}, 21_000);
+}, 26_000);
 
 setTimeout(() => {
   console.log(
     theme.objIdent('Object')                              +
     theme.dot('.') + theme.funcIdent('setPrototypeOf')    +
     theme.mainDelim('(\n')                                +
-    theme.objIdent('VerifiedMember') + theme.dot('.')     +
+    theme.objIdent('  VerifiedMember') + theme.dot('.')   +
     theme.protoIdent('prototype') + theme.comma(', ')     +
     theme.objIdent('User') + theme.dot('.')               +
-    theme.protoIdent('prototype') + theme.mainDelim(')')  +
-    theme.semicolon(';\n\n')
+    theme.protoIdent('prototype\n')                       +
+    theme.mainDelim(')')  + theme.semicolon(';\n\n')
   );  
-}, 23_000);
+}, 28_000);
 
 Object.setPrototypeOf(
   VerifiedMember.prototype, User.prototype
@@ -190,7 +192,7 @@ setTimeout( () => {
       'Creating object prototype Doctor...\n'
     )
   );  
-}, 26_000);
+}, 31_000);
 
 setTimeout( () => {
   console.log(
@@ -223,7 +225,7 @@ setTimeout( () => {
     theme.trueIdent('true') + theme.semicolon(';\n')      +
     theme.mainDelim('}\n\n')
   );  
-}, 28_000);
+}, 33_000);
 
 function Doctor(
   lastName,
@@ -247,7 +249,7 @@ setTimeout( () => {
       'it to\nDoctor prototype...\n'
     )
   );  
-}, 33_000);
+}, 38_000);
 
 setTimeout( () => {
   console.log(
@@ -284,7 +286,7 @@ setTimeout( () => {
     theme.delim2('  )') + theme.semicolon(';\n')          +
     theme.mainDelim('}\n\n')
   );  
-}, 35_000);
+}, 40_000);
 
 Doctor.prototype.introduceSelf = function()  {
   console.log(
@@ -301,20 +303,20 @@ setTimeout( () => {
       'Setting prototype of Doctor to VerifiedMember...\n'
     )
   );  
-}, 40_000);
+}, 45_000);
 
 setTimeout( () => {
   console.log(
     theme.objIdent('Object') + theme.dot('.')             +
-    theme.funcIdent('setPrototypeOf')                     +
+    theme.dot('.') + theme.funcIdent('setPrototypeOf')    +
     theme.mainDelim('(\n')                                +
-    theme.objIdent('  Doctor')                            +
+    theme.objIdent('  Doctor') + theme.dot('.')           +
     theme.protoIdent('prototype') + theme.comma(', ')     +
     theme.objIdent('VerifiedMember')  + theme.dot('.')    +
-    theme.protoIdent('prototype') + theme.mainDelim(')')  +
-    theme.semicolon(';\n\n')
+    theme.protoIdent('prototype\n')                       +
+    theme.mainDelim(')') + theme.semicolon(';\n\n')
   );  
-}, 42_000);
+}, 47_000);
 
 Object.setPrototypeOf(
   Doctor.prototype, VerifiedMember.prototype
@@ -326,7 +328,7 @@ setTimeout( () => {
       'Instantiating pcpDoctor of type Doctor...\n'
     )
   );  
-}, 45_000);
+}, 50_000);
 
 setTimeout( () => {
   console.log(
@@ -344,7 +346,7 @@ setTimeout( () => {
     theme.strLiteral('  \'Endocrinology\'\n')            +
     theme.mainDelim(')') + theme.semicolon(';\n\n')
   );  
-}, 47_000);
+}, 52_000);
 
 const pcpDoctor = new Doctor(
   'Skidaddle',
@@ -360,11 +362,11 @@ setTimeout( () => {
       'Calling introduceSelf() on pcpDoctor...\n'
     )
   );  
-}, 52_000);
+}, 57_000);
 
 setTimeout( () => {
   pcpDoctor.introduceSelf();  
-}, 54_000);
+}, 59_000);
 
 setTimeout( () => {
   console.log(
@@ -373,7 +375,7 @@ setTimeout( () => {
       '-------------------\n'
     )
   );  
-}, 59_000);
+}, 64_000);
 
 setTimeout( () => {
   console.log(
@@ -382,24 +384,24 @@ setTimeout( () => {
       '---------------------'
     )
   );  
-}, 61_000);
+}, 66_000);
 
 setTimeout( () => {
   console.log(pcpDoctor, '\n\n');  
-}, 63_000);
+}, 68_000);
 
 setTimeout( () => {
   console.log(
     theme.header(
-      'Constructor of pcpDoctor:\n'   +
-      '------------------------'
+      'Prototype of pcpDoctor:\n'   +
+      '----------------------'
     )
   );  
-}, 68_000);
+}, 71_000);
 
 setTimeout( () => {
   console.log(pcpDoctor.constructor, '\n\n');  
-}, 70_000);
+}, 73_000);
 
 setTimeout( () => {
   console.log(
@@ -408,13 +410,13 @@ setTimeout( () => {
       '-------------------'
     )
   );  
-}, 73_000);
+}, 76_000);
 
 setTimeout( () => {
   console.log(
     Doctor.prototype, '\n\n'
   );  
-}, 75_000);
+}, 78_000);
 
 setTimeout( () => {
   console.log(
@@ -423,13 +425,13 @@ setTimeout( () => {
       '---------------------------'
     )
   );  
-}, 78_000);
+}, 81_000);
 
 setTimeout( () => {
   console.log(
     VerifiedMember.prototype, '\n\n'
   );  
-}, 80_000);
+}, 83_000);
 
 setTimeout( () => {
   console.log(
@@ -438,8 +440,8 @@ setTimeout( () => {
       '-------------------'
     )
   );  
-}, 83_000);
+}, 86_000);
 
 setTimeout( () => {
   console.log(Object.prototype, '\n');  
-}, 85_000);
+}, 88_000);
