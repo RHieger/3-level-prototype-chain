@@ -16,7 +16,9 @@ This program is executable by issuing the command:
 npm start
 ```
 
-## NOTE: The color-coded output, as mentioned above, is implemented using a package called chalk,
+## NOTE:
+
+The color-coded output, as mentioned above, is implemented using a package called chalk,
 which is avalable through NPM at this address:
 
 [https://www.npmjs.com/package/chalk](https://www.npmjs.com/package/chalk)
